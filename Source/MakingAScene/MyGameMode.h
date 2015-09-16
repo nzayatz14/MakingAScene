@@ -3,13 +3,13 @@
 #pragma once
 
 #include "GameFramework/GameMode.h"
-#include "MakingASceneGameMode.generated.h"
+#include "MyGameMode.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class MAKINGASCENE_API AMakingASceneGameMode : public AGameMode
+class MAKINGASCENE_API AMyGameMode : public AGameMode
 {
 	GENERATED_BODY()
 	

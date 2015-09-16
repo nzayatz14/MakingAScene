@@ -29,7 +29,28 @@ void AAvatar::Tick( float DeltaTime )
 // Called to bind functionality to input
 void AAvatar::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 {
+    check(InputComponent);
+    InputComponent->BindAxis("Forward",this,&AAvatar::moveForward);
+    InputComponent->BindAxis("Strafe",this,&AAvatar::moveRight);
+    
 	Super::SetupPlayerInputComponent(InputComponent);
 
+}
+
+
+void AAvatar::moveForward(float amount){
+    if (Controller && amount) {
+        FVector fwd = GetActorForwardVector();
+        AddMovementInput(fwd, amount);
+    }
+}
+
+
+
+void AAvatar::moveRight(float amount){
+    /*if (Controller && amount) {
+        FVector fwd = GetActorForwardVector();
+        AddMovementInput(fwd, amount);
+    }*/
 }
 
