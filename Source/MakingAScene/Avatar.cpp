@@ -31,7 +31,7 @@ void AAvatar::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 {
     check(InputComponent);
     InputComponent->BindAxis("Forward",this,&AAvatar::moveForward);
-    InputComponent->BindAxis("Strafe",this,&AAvatar::moveRight);
+    InputComponent->BindAxis("strafe",this,&AAvatar::moveRight);
     
 	Super::SetupPlayerInputComponent(InputComponent);
 
